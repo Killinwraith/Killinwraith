@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=800&color=95BF47&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Hetang.;I+build+tools+people+rely+on+every+day.;AI+only+where+it+can+be+checked." alt="Hi, I'm Hetang. I build tools people rely on every day. AI only where it can be checked." />
+<img src="./assets/banner.svg" width="100%" alt="Hetang Mehta: ships software, hikes mountains, chases good light" />
 
-**Computer Engineering @ University of Alberta** · **Lead Developer (co-op) @ CNRL** · **ML Team Lead @ Alberta BIONIX**
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=95BF47&center=true&vCenter=true&width=700&lines=I+turn+10-day+UATs+into+4-minute+coffee+breaks.;I+teach+LLMs+not+to+make+up+numbers.;Fluent+in+TypeScript%2C+Python+and+VB.NET+(yes%2C+VB.NET).;Weekdays%3A+shipping.+Weekends%3A+summits." alt="I turn 10-day UATs into 4-minute coffee breaks. I teach LLMs not to make up numbers. Fluent in TypeScript, Python and VB.NET (yes, VB.NET). Weekdays: shipping. Weekends: summits." />
 
 [![Website](https://img.shields.io/badge/hetangmehta.ca-111111?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.hetangmehta.ca/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hetang-mehta/)
@@ -11,31 +11,85 @@
 
 ---
 
-```ts
-const hetang = {
-  now:      "Building Store Copilot, a Shopify admin app for merchants",
-  work:     "3 co-op terms at CNRL → lead developer of a production budgeting app",
-  club:     "Leading ML for a powered prosthetic knee (10 ms control loop)",
-  believes: "LLMs plan, deterministic code executes, evals prove it",
-};
+```console
+hetang@calgary:~$ whoami
+computer engineering student who ships production code and then writes the tests for it
+
+hetang@calgary:~$ cat ./currently.txt
+→ building Store Copilot, a Shopify admin app that answers merchants in plain English
+→ leading ML for a powered prosthetic knee (the control loop has 10 ms. no pressure.)
+→ wrapping up co-op term #3 as lead developer at CNRL
+
+hetang@calgary:~$ cat ./off_screen.txt
+→ hiking the Rockies, camera in hand
+→ planning the next trip before unpacking from the last one
+
+hetang@calgary:~$ cat ./philosophy.txt
+LLMs plan. Deterministic code executes. Evals prove it. Vibes are not a test suite.
+
+hetang@calgary:~$ ./apply --company=shopify --role=intern
+✔ resume compiled (1 page, no overfull hboxes)
+✔ Store Copilot built on the Admin API
+⏳ waiting for a recruiter to read this far...
 ```
 
-## 🛠 Selected work
+## 🎮 Current stats
 
-| Project | What it does | Proof |
+<div align="center">
+<img src="./assets/stats.svg" width="100%" alt="Player stats: level 3 (co-op terms cleared), next quest Shopify Intern at 85% XP. Achievements unlocked: Lead Developer, Speedrunner (117s to 22s), Test Wizard (10 days to 4 min), Hallucination Hunter (0 made-up numbers), Bionic Engineer (10 ms control loop), Polyglot. Side quests: hiking, photography, travel." />
+</div>
+
+## 💼 Experience
+
+<table>
+<tr><td>
+
+### 🛢️ Canadian Natural Resources (CNRL), Calgary
+**Systems Developer Student · 3 co-op terms, 24 months**
+
+**Term 3 · May–Dec 2026: the "you're the lead now" term**
+- Took over as **lead developer** of a production capital-budgeting app (VB.NET, Oracle) when the previous lead moved teams, keeping a release every **3–4 weeks** and getting a new developer to production in **2 months**
+- Cut asset loads from **90–160 → 5–20 minutes** by building an API import for 900+ assets per load, with version locks and a per-asset audit trail
+- Sped up worst-case load time **81%** (117s → 22s) by profiling and moving a 59s step off the critical path
+- Put every database object under version control after missed edits caused hotfixes. Found the gap in standups I started.
+
+**Term 2 · Jan–Aug 2025: the "rebuild it properly" term**
+- Rebuilt the economics engine after 4 years of tech debt, fixing outdated math and adding a new major-project level
+- Cut release validation from **10 days of manual testing → 4 minutes** with 300+ automated tests
+- Built a golden well-production database **and** the PWA portal for it (C#, Blazor), removing reconciliation work that ate **a third** of analysis time for 500+ engineers
+
+**Term 1 · Jan–Aug 2024: the "learn where the bodies are buried" term**
+- Reduced database tickets **33%** vs. the prior 24 months by redesigning Oracle schemas and tuning queries
+- Shipped 15+ hotfixes and small features to production
+
+</td></tr>
+<tr><td>
+
+### 🦿 Alberta BIONIX, Edmonton
+**ML Team Lead · Sep 2025 – Present**
+- Lead a 2-engineer ML team building control models for a powered prosthetic knee
+- Cut model inputs from **24 → 7 features** while keeping **87%** accuracy, from a **26GB** EMG gait dataset
+- Co-designed a **10 ms** on-leg control loop: swapped a CNN too big for the onboard chip for an LDA classifier, a small MLP and PID control
+- Leading design of an RL tuner that adjusts PID gains each stride, so learned models never drive the motor directly
+
+</td></tr>
+<tr><td>
+
+### ⚙️ Suncor Energy, Fort McMurray
+**Data Analyst Intern · Sep–Dec 2023**
+- Saved **30+ hours/week** and **$26K/year** with 3 Python automation tools for SAP workflows
+
+</td></tr>
+</table>
+
+## 🛠️ Things I've built
+
+| Project | What it does | Receipts 🧾 |
 |---|---|---|
-| 🛍️ **[Store Copilot](https://github.com/Killinwraith/ShopifyStoreCopilot)** | Embedded Shopify admin app that answers merchants' plain-English sales and inventory questions. The LLM fills a typed query plan; TypeScript executes it. | **28/30** evals · **0** hallucinated numbers · 4 guardrail layers |
-| 🧠 **[Batch Normalization](https://github.com/Killinwraith/BatchNormalization-ReduceInternalCovariateShift)** | Reproduction of Ioffe & Szegedy (2015) in PyTorch, on MNIST and CIFAR-10. | MNIST **73–84% → ~98%** · stable at LR 0.1 where the baseline diverged |
-| 🦿 **[EMG Viability Model](https://github.com/albertabionix/EMG_Viability_ML_Algorithm)** | Classifies prosthetic-trial candidate viability from EMG sensor data, for Alberta BIONIX. | Built on a **26GB** gait dataset · 24 → 7 features at 87% accuracy |
-| 🔎 **[RagApp](https://github.com/Killinwraith/RagApp)** | Retrieval-augmented generation from scratch, no LangChain, grounded in a local LLM. | ~**50 lines** of Python · NumPy cosine search |
-
-## ⚡ At work
-
-> **CNRL, Systems Developer co-op · 2024 → 2026**
->
-> 🚀 Took over as **lead developer** of a production capital-budgeting app, keeping a release every 3–4 weeks
-> 🧪 Cut release validation from **10 days → 4 minutes** with 300+ automated tests
-> ⏱️ Sped up worst-case load time **81%** (117s → 22s)
+| 🛍️ **[Store Copilot](https://github.com/Killinwraith/ShopifyStoreCopilot)** | Embedded Shopify admin app that answers merchants' sales and inventory questions. The LLM fills a typed query plan; TypeScript executes it. | **28/30** evals · **0** hallucinated numbers · 4 guardrail layers |
+| 🧠 **[Batch Normalization](https://github.com/Killinwraith/BatchNormalization-ReduceInternalCovariateShift)** | Reproduction of Ioffe & Szegedy (2015) in PyTorch on MNIST and CIFAR-10. | MNIST **73–84% → ~98%** · survived LR 0.1 while the baseline diverged |
+| 🦿 **[EMG Viability Model](https://github.com/albertabionix/EMG_Viability_ML_Algorithm)** | Classifies prosthetic-trial candidate viability from EMG sensor data. | **26GB** dataset · Random Forest feature ranking |
+| 🔎 **[RagApp](https://github.com/Killinwraith/RagApp)** | RAG from scratch, no LangChain, grounded in a local LLM. | ~**50 lines** of Python · NumPy cosine search |
 
 ## 🧰 Stack
 
@@ -52,6 +106,13 @@ const hetang = {
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white)
 
+## 🎲 Fun facts
+
+- I've read more Oracle execution plans than novels this year
+- I wrote 300 tests so nobody ever has to click through 10 days of UAT again. You're welcome, business team.
+- My camera roll is 80% mountains, 20% screenshots of stack traces
+- 日本語も話せます (yes, I speak Japanese)
+
 <div align="center">
-<sub>Calgary, AB · 日本語も話せます</sub>
+<sub>Made in Calgary · Powered by coffee, trail mix and well-typed query plans</sub>
 </div>
