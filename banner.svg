@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="Hetang Mehta: builds software, hikes mountains, takes photos. Animated banner with planes, floating cameras and climbers top-roping on cliff walls.">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1426"/>
+      <stop offset="0.6" stop-color="#16324a"/>
+      <stop offset="1" stop-color="#2c5a5a"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b3f46"/>
+      <stop offset="1" stop-color="#565c66"/>
+    </linearGradient>
+    <linearGradient id="rockR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#3b3f46"/>
+      <stop offset="1" stop-color="#565c66"/>
+    </linearGradient>
+    <g id="plane">
+      <path d="M0 6 L30 4 L40 0 L44 2 L38 6 L44 10 L40 12 L30 8 L0 6 Z" fill="#e8eef5"/>
+      <path d="M14 5 L22 -6 L26 -6 L22 5 Z M14 7 L22 18 L26 18 L22 7 Z" fill="#c9d4df"/>
+      <path d="M0 6 L-4 0 L2 0 L6 5 Z" fill="#c9d4df"/>
+    </g>
+    <g id="camera">
+      <rect x="0" y="4" width="34" height="22" rx="4" fill="#f2f2f2"/>
+      <rect x="6" y="0" width="10" height="6" rx="1.5" fill="#f2f2f2"/>
+      <circle cx="18" cy="15" r="7.5" fill="#1d2633"/>
+      <circle cx="18" cy="15" r="4" fill="#3d6f9e"/>
+      <circle cx="16.5" cy="13.5" r="1.3" fill="#ffffff"/>
+      <circle cx="29" cy="9" r="1.6" fill="#95BF47"/>
+    </g>
+    <g id="climber" stroke="#ffd166" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <circle cx="0" cy="-14" r="4.5" fill="#ffd166" stroke="none"/>
+      <path d="M0 -9 L0 6"/>
+      <path class="armL" d="M0 -6 L-7 -15"/>
+      <path class="armR" d="M0 -6 L7 -13"/>
+      <path class="legL" d="M0 6 L-7 12 L-6 19"/>
+      <path class="legR" d="M0 6 L6 14"/>
+      <rect x="-3" y="2" width="6" height="4" fill="#ef476f" stroke="none"/>
+    </g>
+  </defs>
+
+  <style>
+    .twinkle { animation: twinkle 3s ease-in-out infinite; }
+    .t2 { animation-delay: 1.1s; } .t3 { animation-delay: 2.2s; }
+    @keyframes twinkle { 0%,100% { opacity: .25 } 50% { opacity: 1 } }
+
+    .fly1 { animation: fly 14s linear infinite; }
+    .fly2 { animation: fly 19s linear infinite; animation-delay: -7s; }
+    .fly3 { animation: flyBack 23s linear infinite; animation-delay: -4s; }
+    @keyframes fly { from { transform: translateX(-120px) } to { transform: translateX(1120px) } }
+    @keyframes flyBack { from { transform: translateX(1120px) scaleX(-1) } to { transform: translateX(-120px) scaleX(-1) } }
+
+    .bob1 { animation: bob 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .bob2 { animation: bob 5.5s ease-in-out infinite; animation-delay: -2s; transform-box: fill-box; transform-origin: center; }
+    .bob3 { animation: bob 6.5s ease-in-out infinite; animation-delay: -4s; transform-box: fill-box; transform-origin: center; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-7deg) } 50% { transform: translateY(-12px) rotate(7deg) } }
+
+    .flash { animation: flash 6s ease-out infinite; opacity: 0; }
+    .flash2 { animation-delay: 3s; }
+    @keyframes flash { 0%,88%,100% { opacity: 0 } 90% { opacity: .9 } 94% { opacity: 0 } }
+
+    .climbL { animation: climb 9s ease-in-out infinite; }
+    .climbR { animation: climb 11s ease-in-out infinite; animation-delay: -5s; }
+    @keyframes climb { 0% { transform: translateY(0) } 45% { transform: translateY(-165px) } 55% { transform: translateY(-165px) } 100% { transform: translateY(0) } }
+
+    .rope { stroke: #ef476f; stroke-width: 1.6; fill: none; stroke-dasharray: 5 3; }
+  </style>
+
+  <!-- sky -->
+  <rect width="1000" height="300" fill="url(#sky)"/>
+  <g fill="#ffffff">
+    <circle class="twinkle" cx="180" cy="40" r="1.6"/>
+    <circle class="twinkle t2" cx="260" cy="90" r="1.2"/>
+    <circle class="twinkle t3" cx="340" cy="30" r="1.4"/>
+    <circle class="twinkle" cx="640" cy="50" r="1.3"/>
+    <circle class="twinkle t2" cx="720" cy="25" r="1.6"/>
+    <circle class="twinkle t3" cx="800" cy="95" r="1.2"/>
+    <circle class="twinkle t2" cx="470" cy="20" r="1.1"/>
+    <circle class="twinkle" cx="560" cy="85" r="1.2"/>
+  </g>
+  <circle cx="830" cy="70" r="20" fill="#f6e7b0" opacity=".9"/>
+  <circle cx="838" cy="64" r="18" fill="#16324a" opacity=".95"/>
+
+  <!-- planes -->
+  <g transform="translate(0,55)"><g class="fly1"><use href="#plane"/></g></g>
+  <g transform="translate(0,120) scale(.7)"><g class="fly2"><use href="#plane"/></g></g>
+  <g transform="translate(0,35) scale(.55)"><g class="fly3"><use href="#plane"/></g></g>
+
+  <!-- mountains -->
+  <polygon points="110,300 220,225 280,250 370,200 450,252 540,215 630,262 720,205 800,245 890,215 890,300" fill="#1f3d4a"/>
+  <polygon points="370,200 388,216 378,214 370,224 361,213 352,215" fill="#e9f1f5" opacity=".85"/>
+  <polygon points="720,205 737,221 728,219 720,228 712,218 703,220" fill="#e9f1f5" opacity=".85"/>
+  <polygon points="110,300 200,255 300,280 420,240 520,278 620,248 760,282 890,250 890,300" fill="#173040"/>
+  <polygon points="110,300 890,300 890,290 700,280 520,292 330,282 110,292" fill="#0f2230"/>
+
+  <!-- tiny hiker on the ridge -->
+  <g transform="translate(624,254)" stroke="#95BF47" stroke-width="2" stroke-linecap="round" fill="none">
+    <circle cx="0" cy="-12" r="3" fill="#95BF47" stroke="none"/>
+    <path d="M0 -9 L0 0 M0 0 L-4 7 M0 0 L4 7 M0 -6 L5 -2 L7 8"/>
+    <rect x="-5" y="-9" width="4" height="6" fill="#95BF47" stroke="none"/>
+  </g>
+
+  <!-- floating cameras -->
+  <g transform="translate(170,95)"><g class="bob1"><use href="#camera"/><circle class="flash" cx="18" cy="15" r="22" fill="#ffffff"/></g></g>
+  <g transform="translate(790,150) scale(.8)"><g class="bob2"><use href="#camera"/><circle class="flash flash2" cx="18" cy="15" r="22" fill="#ffffff"/></g></g>
+  <g transform="translate(560,40) scale(.65)"><g class="bob3"><use href="#camera"/></g></g>
+
+  <!-- left cliff + top-rope climber -->
+  <polygon points="0,0 96,0 104,40 92,80 108,130 96,180 110,230 100,300 0,300" fill="url(#rock)"/>
+  <circle cx="88" cy="14" r="3.5" fill="#cfd6de"/>
+  <path class="rope" d="M88 14 L96 292"/><path class="rope" d="M78 14 L78 262"><animate attributeName="d" dur="9s" begin="0s" repeatCount="indefinite" keyTimes="0;0.45;0.55;1" calcMode="spline" keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1" values="M88 14 L78 262;M88 14 L78 97;M88 14 L78 97;M88 14 L78 262"/></path>
+  <g transform="translate(96,292)" stroke="#9bd1ff" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <circle cx="0" cy="-16" r="3.8" fill="#9bd1ff" stroke="none"/>
+    <path d="M0 -12 L0 -2 M0 -2 L-4 6 M0 -2 L4 6 M0 -9 L-6 -5"/>
+  </g>
+  <g transform="translate(78,258)"><g class="climbL"><use href="#climber"/></g></g>
+
+  <!-- right cliff + top-rope climber -->
+  <polygon points="1000,0 904,0 896,50 910,95 892,150 906,200 890,250 900,300 1000,300" fill="url(#rockR)"/>
+  <circle cx="912" cy="14" r="3.5" fill="#cfd6de"/>
+  <path class="rope" d="M912 14 L904 292"/><path class="rope" d="M922 14 L922 262"><animate attributeName="d" dur="11s" begin="-5s" repeatCount="indefinite" keyTimes="0;0.45;0.55;1" calcMode="spline" keySplines=".42 0 .58 1;0 0 1 1;.42 0 .58 1" values="M912 14 L922 262;M912 14 L922 97;M912 14 L922 97;M912 14 L922 262"/></path>
+  <g transform="translate(904,292)" stroke="#9bd1ff" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <circle cx="0" cy="-16" r="3.8" fill="#9bd1ff" stroke="none"/>
+    <path d="M0 -12 L0 -2 M0 -2 L-4 6 M0 -2 L4 6 M0 -9 L6 -5"/>
+  </g>
+  <g transform="translate(922,258) scale(-1,1)"><g class="climbR"><use href="#climber"/></g></g>
+
+  <!-- title -->
+  <text x="500" y="128" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">Hetang Mehta</text>
+  <text x="500" y="160" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#cfe3ea" letter-spacing="1.5">ships software · hikes mountains · chases good light</text>
+  <text x="500" y="186" text-anchor="middle" font-family="SFMono-Regular, Consolas, monospace" font-size="13" fill="#95BF47">Computer Engineering @ UAlberta · Lead Dev (co-op) @ CNRL · ML Lead @ BIONIX</text>
+</svg>
