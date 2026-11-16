@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" width="100%" alt="Hetang Mehta: ships software, hikes mountains, chases good light" />
+<img src="./banner.svg" width="100%" alt="Hetang Mehta: ships software, hikes mountains, chases good light" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=95BF47&center=true&vCenter=true&width=700&lines=I+turn+10-day+UATs+into+4-minute+coffee+breaks.;I+teach+LLMs+not+to+make+up+numbers.;Fluent+in+TypeScript%2C+Python+and+VB.NET+(yes%2C+VB.NET).;Weekdays%3A+shipping.+Weekends%3A+summits." alt="I turn 10-day UATs into 4-minute coffee breaks. I teach LLMs not to make up numbers. Fluent in TypeScript, Python and VB.NET (yes, VB.NET). Weekdays: shipping. Weekends: summits." />
 
@@ -36,7 +36,7 @@ hetang@calgary:~$ ./apply --company=shopify --role=intern
 ## 🎮 Current stats
 
 <div align="center">
-<img src="./assets/stats.svg" width="100%" alt="Player stats: level 3 (co-op terms cleared), next quest Shopify Intern at 85% XP. Achievements unlocked: Lead Developer, Speedrunner (117s to 22s), Test Wizard (10 days to 4 min), Hallucination Hunter (0 made-up numbers), Bionic Engineer (10 ms control loop), Polyglot. Side quests: hiking, photography, travel." />
+<img src="./stats.svg" width="100%" alt="Player stats: level 3 (co-op terms cleared), next quest Shopify Intern at 85% XP. Achievements unlocked: Lead Developer, Speedrunner (117s to 22s), Test Wizard (10 days to 4 min), Hallucination Hunter (0 made-up numbers), Bionic Engineer (10 ms control loop), Polyglot. Side quests: hiking, photography, travel." />
 </div>
 
 ## 💼 Experience
